@@ -1,5 +1,4 @@
 import React from 'react'
-import Navbar from './components/Navbar'
 
 const App = () => {
   return (
@@ -22,7 +21,7 @@ const App = () => {
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-center text-center mb-5">
             <div className="w-full lg:w-6/12 px-4">
-              <h2 className="uppercase text-4xl font-semibold">
+              <h2 className="uppercase text-4xl font-semibold ">
                 Github Finder
               </h2>
               <p className="uppercase text-lg leading-relaxed m-4 text-gray-600">
@@ -34,132 +33,29 @@ const App = () => {
             <input
               type="text"
               placeholder="Search Users..."
-              className="px-3 py-3 placeholder-blueGray-300 text-blueGray-600 relative  bg-white rounded text-sm border border-blueGray-300 outline-none focus:outline-none focus:ring w-full"
+              className="rounded-full px-3 py-3 placeholder-blueGray-500 text-blueGray-600 relative  bg-white  text-md  border-4 border-light-blue-500 border-opacity-50 outline-none focus:outline-none focus:ring w-full"
             />
           </div>
-          <div className="shadow-xl rounded-md p-3 flex flex-wrap mt-10">
+          <div className="p-3 flex flex-wrap mt-10">
             <div className="w-full p-5 md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
-              <div className="px-6">
-                <img
-                  alt="..."
-                  src="https://avatars.githubusercontent.com/u/1?v=4"
-                  className="shadow-xl rounded-full max-w-full mx-auto transition hover:opacity-80 transition-opacity duration-500 ease-in"
-                  style={{ maxWidth: '150px' }}
-                />
-                <div className="pt-6 text-center">
-                  <h5 className="text-xl font-bold">Romina Hadid</h5>
-                  <div className="mt-6">
-                    <button
-                      className="text-white font-bold uppercase text-base px-8 py-3 rounded-full shadow-md hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all  transition duration-500 ease-in-out bg-blue-600 hover:bg-red-600 transform hover:-translate-y-1 hover:scale-110 ..."
-                      type="button"
-                    >
-                      More
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
-              <div className="px-6">
-                <img
-                  alt="..."
-                  src="https://avatars.githubusercontent.com/u/1?v=4"
-                  className="shadow-xl rounded-full max-w-full mx-auto transition hover:opacity-80 transition-opacity duration-500 ease-in"
-                  style={{ maxWidth: '220px' }}
-                />
-                <div className="pt-6 text-center">
-                  <h5 className="text-xl font-bold">Romina Hadid</h5>
-                  <div className="mt-6">
-                    <button
-                      className="text-white font-bold uppercase text-base px-8 py-3 rounded-full shadow-md hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all  transition duration-500 ease-in-out bg-blue-600 hover:bg-red-600 transform hover:-translate-y-1 hover:scale-110 ..."
-                      type="button"
-                    >
-                      More
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
-              <div className="px-6">
-                <img
-                  alt="..."
-                  src="https://avatars.githubusercontent.com/u/1?v=4"
-                  className="shadow-xl rounded-full max-w-full mx-auto transition hover:opacity-80 transition-opacity duration-500 ease-in"
-                  style={{ maxWidth: '220px' }}
-                />
-                <div className="pt-6 text-center">
-                  <h5 className="text-xl font-bold">Romina Hadid</h5>
-                  <div className="mt-6">
-                    <button
-                      className="text-white font-bold uppercase text-base px-8 py-3 rounded-full shadow-md hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all  transition duration-500 ease-in-out bg-blue-600 hover:bg-red-600 transform hover:-translate-y-1 hover:scale-110 ..."
-                      type="button"
-                    >
-                      More
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
-              <div className="px-6">
-                <img
-                  alt="..."
-                  src="https://avatars.githubusercontent.com/u/1?v=4"
-                  className="shadow-xl rounded-full max-w-full mx-auto transition hover:opacity-80 transition-opacity duration-500 ease-in"
-                  style={{ maxWidth: '220px' }}
-                />
-                <div className="pt-6 text-center">
-                  <h5 className="text-xl font-bold">Romina Hadid</h5>
-                  <div className="mt-6">
-                    <button
-                      className="text-white font-bold uppercase text-base px-8 py-3 rounded-full shadow-md hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all  transition duration-500 ease-in-out bg-blue-600 hover:bg-red-600 transform hover:-translate-y-1 hover:scale-110 ..."
-                      type="button"
-                    >
-                      More
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
-              <div className="px-6">
-                <img
-                  alt="..."
-                  src="https://avatars.githubusercontent.com/u/1?v=4"
-                  className="shadow-xl rounded-full max-w-full mx-auto transition hover:opacity-80 transition-opacity duration-500 ease-in"
-                  style={{ maxWidth: '220px' }}
-                />
-                <div className="pt-6 text-center">
-                  <h5 className="text-xl font-bold">Romina Hadid</h5>
-                  <div className="mt-6">
-                    <button
-                      className="text-white font-bold uppercase text-base px-8 py-3 rounded-full shadow-md hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all  transition duration-500 ease-in-out bg-blue-600 hover:bg-red-600 transform hover:-translate-y-1 hover:scale-110 ..."
-                      type="button"
-                    >
-                      More
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
-              <div className="px-6">
-                <img
-                  alt="..."
-                  src="https://avatars.githubusercontent.com/u/1?v=4"
-                  className="shadow-xl rounded-full max-w-full mx-auto  hover:opacity-80 transition-opacity duration-500 ease-in"
-                  style={{ maxWidth: '220px' }}
-                />
-                <div className="pt-6 text-center">
-                  <h5 className="text-xl font-bold">Romina Hadid</h5>
-                  <div className="mt-6">
-                    <button
-                      className="text-white font-bold uppercase text-base px-8 py-3 rounded-full shadow-md hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all  transition duration-500 ease-in-out bg-blue-600 hover:bg-red-600 transform hover:-translate-y-1 hover:scale-110 ..."
-                      type="button"
-                    >
-                      More
-                    </button>
+              <div class="max-w-md py-4 px-8 bg-white shadow-lg rounded-lg my-5">
+                <div className="px-6">
+                  <img
+                    alt="..."
+                    src="https://avatars.githubusercontent.com/u/1?v=4"
+                    className="shadow-xl rounded-full max-w-full mx-auto transition hover:opacity-80 transition-opacity duration-500 ease-in"
+                    style={{ maxWidth: '150px' }}
+                  />
+                  <div className="pt-6 text-center">
+                    <h5 className="text-xl font-bold">Romina Hadid</h5>
+                    <div className="mt-6">
+                      <button
+                        className="text-white font-bold uppercase text-base px-8 py-3 rounded-full shadow-md hover:shadow-lg outline-none focus:outline-none mr-1 mb-1  transition-all   duration-500 ease-in-out bg-blue-600 hover:bg-red-600 transform hover:-translate-y-1 hover:scale-110 ..."
+                        type="button"
+                      >
+                        More
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
