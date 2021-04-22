@@ -35,7 +35,13 @@ const App = () => {
               placeholder="Search Users..."
               className="rounded-full px-3 py-3 placeholder-blueGray-500 text-blueGray-600 relative  bg-white  text-md  border-4 border-light-blue-500 border-opacity-50 outline-none focus:outline-none focus:ring w-full"
             />
+            <div className="flex justify-center md:justify-center m-3 ">
+              <button class="bg-red-400 hover:bg-red-300 rounded text-white w-20 p-2 pl-4 pr-4">
+                <p class="font-semibold text-xs">Search</p>
+              </button>
+            </div>
           </div>
+
           <div className="p-3 flex flex-wrap mt-10">
             <div className="w-full p-5 md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
               <div class="max-w-md py-4 px-8 bg-white shadow-lg rounded-lg my-5">
