@@ -29,17 +29,16 @@ const App = () => {
               </p>
             </div>
           </div>
-          <div className="m-3 p-3">
+
+          <div class="bg-white flex m-3 ">
             <input
+              class="w-full rounded-full p-2 placeholder-blueGray-500 text-blueGray-600 relative  bg-white  text-md  border-4 border-light-blue-500 border-opacity-50 outline-none focus:outline-none focus:ring"
               type="text"
               placeholder="Search Users..."
-              className="rounded-full px-3 py-3 placeholder-blueGray-500 text-blueGray-600 relative  bg-white  text-md  border-4 border-light-blue-500 border-opacity-50 outline-none focus:outline-none focus:ring w-full"
             />
-            <div className="flex justify-center md:justify-center m-3 ">
-              <button class="bg-red-400 hover:bg-red-300 rounded text-white w-20 p-2 pl-4 pr-4">
-                <p class="font-semibold text-xs">Search</p>
-              </button>
-            </div>
+            <button class="bg-red-400 hover:bg-red-300 rounded-full text-white p-2 pl-4 pr-4 ml-1">
+              <p class="font-semibold text-xs">Search</p>
+            </button>
           </div>
 
           <div className="p-3 flex flex-wrap mt-10">
