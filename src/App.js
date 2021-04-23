@@ -2,9 +2,12 @@ import axios from 'axios'
 import React, { Component } from 'react'
 import Navbar from './components/Layout/Navbar'
 import Seaction from './components/Layout/Seaction'
-import Spinner from './components/Layout/Spinner'
+
 import Search from './components/Layout/Users/Search'
 import Users from './components/Layout/Users/Users'
+
+let REACT_CLIENT_ID = 'ccd3a0c757c978538dd4'
+let REACT_CLIENT_KEY = '05579e08c00b61cae13f066d6b5dc818e8b71842'
 
 class App extends Component {
   state = {
@@ -13,7 +16,9 @@ class App extends Component {
   }
 
   async componentDidMount() {
-    const res = await axios.get('https://api.github.com/users')
+    const res = await axios.get(
+      `https://api.github.com/users?client_id=${REACT_CLIENT_ID}&client_secret=${REACT_CLIENT_KEY}`
+    )
 
     this.setState({ users: res.data, loading: false })
   }
