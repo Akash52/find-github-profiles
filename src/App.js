@@ -2,13 +2,14 @@ import axios from 'axios'
 import React, { Component } from 'react'
 import Navbar from './components/Layout/Navbar'
 import Seaction from './components/Layout/Seaction'
+import Spinner from './components/Layout/Spinner'
 import Search from './components/Layout/Users/Search'
 import Users from './components/Layout/Users/Users'
 
 class App extends Component {
   state = {
     users: [],
-    loading: false,
+    loading: true,
   }
 
   async componentDidMount() {

@@ -1,11 +1,14 @@
-import React, { Component } from 'react'
+import React from 'react'
+import Spinner from '../Spinner'
 import UserItem from './Useritem'
 
-class Users extends Component {
-  render() {
+const Users = ({ users, loading }) => {
+  if (loading) {
+    return <Spinner />
+  } else {
     return (
       <div className="p-3 flex flex-wrap mt-10">
-        {this.props.users.map((user) => (
+        {users.map((user) => (
           <UserItem key={user.id} user={user} />
         ))}
       </div>
