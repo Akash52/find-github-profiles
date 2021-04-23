@@ -13,7 +13,8 @@ class App extends Component {
 
   async componentDidMount() {
     const res = await axios.get('https://api.github.com/users')
-    console.log(res.data)
+
+    this.setState({ users: res.data, loading: false })
   }
   render() {
     return (
@@ -24,7 +25,7 @@ class App extends Component {
             <Seaction />
             <Search />
 
-            <Users />
+            <Users loading={this.state.loading} users={this.state.users} />
           </div>
         </section>
       </main>
