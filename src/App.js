@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { Component } from 'react'
+import Alert from './components/Layout/Alert'
 import Navbar from './components/Layout/Navbar'
 import Seaction from './components/Layout/Seaction'
 
@@ -13,6 +14,7 @@ class App extends Component {
   state = {
     users: [],
     loading: false,
+    alert: null,
   }
 
   async componentDidMount() {
@@ -38,7 +40,12 @@ class App extends Component {
   clearUsers = () => {
     this.setState({ users: [], loading: false })
   }
+  //Set alert
+  setAlert = (msg) => {
+    this.setState({ alert: { msg } })
 
+    setTimeout(() => this.setState({ alert: null }), 3000)
+  }
   render() {
     return (
       <main className="bg-pink-50">
@@ -46,10 +53,12 @@ class App extends Component {
         <section className="pt-5 pb-5">
           <div className="container mx-auto px-4">
             <Seaction />
+            <Alert alert={this.state.alert} />
             <Search
               searchUsers={this.searchUsers}
               clearUsers={this.clearUsers}
               showClear={this.state.users.length > 0 ? true : false}
+              setAlert={this.setAlert}
             />
 
             <Users loading={this.state.loading} users={this.state.users} />

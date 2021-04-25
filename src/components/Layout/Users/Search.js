@@ -7,8 +7,12 @@ export class Search extends Component {
 
   onSubmit = (e) => {
     e.preventDefault()
-    this.props.searchUsers(this.state.text)
-    this.setState({ text: '' })
+    if (this.state.text === '') {
+      this.props.setAlert('Please Enter Somethig')
+    } else {
+      this.props.searchUsers(this.state.text)
+      this.setState({ text: '' })
+    }
   }
 
   onChange = (e) => {
@@ -28,7 +32,7 @@ export class Search extends Component {
               value={this.state.text}
               onChange={this.onChange}
             />
-            <button className="bg-red-500 hover:bg-red-700 outline-none  rounded-full text-white p-2 pl-4 pr-4 ml-1">
+            <button className="bg-red-500 hover:bg-red-700 focus:outline-none rounded-full text-white p-2 pl-4 pr-4 ml-1">
               <p className="font-semibold text-lg">Search</p>
             </button>
           </div>
