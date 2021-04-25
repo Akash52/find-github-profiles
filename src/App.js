@@ -12,10 +12,11 @@ let REACT_CLIENT_KEY = '05579e08c00b61cae13f066d6b5dc818e8b71842'
 class App extends Component {
   state = {
     users: [],
-    loading: true,
+    loading: false,
   }
 
   async componentDidMount() {
+    this.setState({ loading: true })
     const res = await axios.get(
       `https://api.github.com/users?client_id=${REACT_CLIENT_ID}&client_secret=${REACT_CLIENT_KEY}`
     )
