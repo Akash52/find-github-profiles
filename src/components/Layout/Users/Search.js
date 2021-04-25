@@ -15,6 +15,7 @@ export class Search extends Component {
     this.setState({ [e.target.name]: e.target.value })
   }
   render() {
+    const { showClear, clearUsers } = this.props
     return (
       <div>
         <form onSubmit={this.onSubmit}>
@@ -27,11 +28,21 @@ export class Search extends Component {
               value={this.state.text}
               onChange={this.onChange}
             />
-            <button class="bg-red-500 hover:bg-red-700 rounded-full text-white p-2 pl-4 pr-4 ml-1">
+            <button className="bg-red-500 hover:bg-red-700 outline-none  rounded-full text-white p-2 pl-4 pr-4 ml-1">
               <p className="font-semibold text-lg">Search</p>
             </button>
           </div>
         </form>
+        {showClear && (
+          <div className="flex  justify-center">
+            <button
+              className="bg-blue-500 hover:bg-blue-700 uppercase font-semibold text-white tracking-wider py-2 px-4 rounded opacity-50"
+              onClick={clearUsers}
+            >
+              Clear
+            </button>
+          </div>
+        )}
       </div>
     )
   }
