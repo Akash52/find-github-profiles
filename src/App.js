@@ -23,6 +23,16 @@ class App extends Component {
 
     this.setState({ users: res.data, loading: false })
   }
+
+  //Search Users
+  searchUsers = async (text) => {
+    const res = await axios.get(
+      `https://api.github.com/search/users?q=${text}&{client_id=${REACT_CLIENT_ID}&client_secret=${REACT_CLIENT_KEY}`
+    )
+
+    this.setState({ users: res.data.items, loading: false })
+  }
+
   render() {
     return (
       <main className="bg-pink-50">
@@ -30,7 +40,7 @@ class App extends Component {
         <section className="pt-5 pb-5">
           <div className="container mx-auto px-4">
             <Seaction />
-            <Search />
+            <Search searchUsers={this.searchUsers} />
 
             <Users loading={this.state.loading} users={this.state.users} />
           </div>
