@@ -7,7 +7,7 @@ const Users = ({ users, loading }) => {
     return <Spinner />
   } else {
     return (
-      <div className="p-3 flex flex-wrap mt-10">
+      <div className="p-3 flex flex-wrap mt-5">
         {users.map((user) => (
           <UserItem key={user.id} user={user} />
         ))}

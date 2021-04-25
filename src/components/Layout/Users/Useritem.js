@@ -8,7 +8,7 @@ const Useritem = ({ user: { login, avatar_url, html_url } }) => {
           <img
             alt="..."
             src={avatar_url}
-            className="shadow-xl rounded-full max-w-full mx-auto  hover:opacity-80 transition-opacity duration-500 ease-in"
+            className="shadow-xl  rounded-full max-w-full mx-auto  hover:opacity-80 transition-opacity duration-500 ease-in"
             style={{ maxWidth: '150px' }}
           />
           <div className="pt-6 text-center">
