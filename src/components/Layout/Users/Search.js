@@ -22,7 +22,7 @@ export class Search extends Component {
     const { showClear, clearUsers } = this.props
     return (
       <div>
-        <form onSubmit={this.onSubmit}>
+        <form autoComplete="off" onSubmit={this.onSubmit}>
           <div className="flex m-3 ">
             <input
               className="w-full rounded-full p-2 placeholder-blueGray-500 text-blueGray-600 relative  bg-white  text-md  border-4 border-light-blue-500 border-opacity-50 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent"
@@ -40,7 +40,7 @@ export class Search extends Component {
         {showClear && (
           <div className="flex  justify-center">
             <button
-              className="bg-blue-500 hover:bg-blue-700 uppercase font-semibold text-white tracking-wider py-2 px-4 rounded opacity-50"
+              className="bg-blue-500 hover:bg-blue-700 uppercase font-semibold text-white tracking-wider py-2 px-4 rounded opacity-70"
               onClick={clearUsers}
             >
               Clear

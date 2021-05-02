@@ -1,11 +1,13 @@
 import axios from 'axios'
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Alert from './components/Layout/Alert'
 import Navbar from './components/Layout/Navbar'
 import Seaction from './components/Layout/Seaction'
 
 import Search from './components/Layout/Users/Search'
 import Users from './components/Layout/Users/Users'
+import About from './components/Pages/About'
 
 let REACT_CLIENT_ID = 'ccd3a0c757c978538dd4'
 let REACT_CLIENT_KEY = '05579e08c00b61cae13f066d6b5dc818e8b71842'
@@ -48,23 +50,38 @@ class App extends Component {
   }
   render() {
     return (
-      <main className="bg-pink-50">
-        <Navbar />
-        <section className="pt-5 pb-5">
-          <div className="container mx-auto px-4">
-            <Seaction />
-            <Alert alert={this.state.alert} />
-            <Search
-              searchUsers={this.searchUsers}
-              clearUsers={this.clearUsers}
-              showClear={this.state.users.length > 0 ? true : false}
-              setAlert={this.setAlert}
-            />
-
-            <Users loading={this.state.loading} users={this.state.users} />
-          </div>
-        </section>
-      </main>
+      <Router>
+        <main className="bg-pink-50">
+          <Navbar />
+          <section className="pt-5 pb-5">
+            <div className="container mx-auto px-4">
+              <Route exact path="/" component={Seaction} />
+              <Alert alert={this.state.alert} />
+              <Switch>
+                <Route
+                  exact
+                  path="/"
+                  render={(props) => (
+                    <Fragment>
+                      <Search
+                        searchUsers={this.searchUsers}
+                        clearUsers={this.clearUsers}
+                        showClear={this.state.users.length > 0 ? true : false}
+                        setAlert={this.setAlert}
+                      />
+                      <Users
+                        loading={this.state.loading}
+                        users={this.state.users}
+                      />
+                    </Fragment>
+                  )}
+                />
+                <Route exact path="/about" component={About} />
+              </Switch>
+            </div>
+          </section>
+        </main>
+      </Router>
     )
   }
 }

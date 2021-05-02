@@ -2,8 +2,8 @@ import React from 'react'
 
 const Useritem = ({ user: { login, avatar_url, html_url } }) => {
   return (
-    <div className="w-full p-5 md:w-6/12 lg:w-4/12 lg:mb-0 mb-12 px-4 transform transition duration-500 hover:scale-110">
-      <div class="max-w-md py-4 px-8 bg-white shadow-lg rounded-lg my-5">
+    <div className="w-full p-5 md:w-6/12 lg:w-4/12 lg:mb-0 mb-6 px-4 transform transition duration-500 hover:scale-110">
+      <div class="max-w-md py-4 px-8 bg-white shadow-lg rounded-lg my-2">
         <div className="px-6">
           <img
             alt="..."
