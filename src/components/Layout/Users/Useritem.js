@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Useritem = ({ user: { login, avatar_url, html_url } }) => {
   return (
@@ -18,7 +19,7 @@ const Useritem = ({ user: { login, avatar_url, html_url } }) => {
                 className="text-white font-bold uppercase text-base px-8 py-3 rounded-full shadow-md hover:shadow-lg outline-none focus:outline-none mr-1 mb-1  transition-all   duration-500 ease-in-out bg-blue-600 hover:bg-red-600 transform hover:-translate-y-1 hover:scale-110 ..."
                 type="button"
               >
-                <a href={html_url}>More</a>
+                <Link to={`/user/${login}`}>More</Link>
               </button>
             </div>
           </div>
