@@ -63,7 +63,7 @@ export class User extends Component {
               <a href={blog}>{blog}</a>
             </p>
 
-            <div className="flex justify-between px-6 py-4">
+            <div className="flex justify-between m-2 px-4 py-2">
               <span className="inline-block bg-blue-100 rounded-full px-3 py-1 text-sm font-semibold text-grey-darker mr-2">
                 #Followers {followers}
               </span>
@@ -83,23 +83,22 @@ export class User extends Component {
         </div>
         <div className="w-full p-5 md:w-6/12 lg:w-4/12 lg:mb-0 mb-6 px-4 transform transition duration-500 hover:scale-110">
           <div className="max-w-md p-10 px-8 bg-white shadow-lg rounded-lg m-2">
-            <button class="py-2 px-3 text-white font-semibold rounded m-2 bg-green-500 hover:bg-green-700 ">
-              <a href={html_url}>Visit Github Profile</a>
-            </button>
-
-            <button class=" py-2 px-3 font-semibold rounded m-2 bg-purple-300 hover:bg-purple-500 ...">
-              Hover me
-            </button>
-            <div class="flex  px-6 py-4">
-              <span class="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker mr-2">
-                #followers {followers}
-              </span>
-              <span class="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker mr-2">
-                #travel
-              </span>
-              <span class="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker">
-                #winter
-              </span>
+            <p className="text-gray-600">
+              <span className="font-bold text-2xl  flex justify-center text-gray-700">
+                Repositories{' '}
+              </span>{' '}
+              :{' '}
+            </p>
+            <div className="flex flex-wrap">
+              <button class="py-2 px-3 text-white font-semibold rounded m-2 bg-red-500 hover:bg-green-700 ">
+                <a href={html_url}>Visit Github Profile</a>
+              </button>
+              <button class="py-2 px-3 text-white font-semibold rounded m-2 bg-yellow-500 hover:bg-green-700 ">
+                <a href={html_url}>Visit Github Profile fsdfdfsdfs</a>
+              </button>
+              <button class="py-2 px-3 text-white font-semibold rounded m-2 bg-blue-500 hover:bg-green-700 ">
+                <a href={html_url}>Visit Github Profile</a>
+              </button>
             </div>
           </div>
         </div>

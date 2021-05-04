@@ -13,7 +13,7 @@ const Navbar = () => {
               to="/"
             >
               <i className="fab fa-github text-lg leading-lg animate-pulse text-white opacity-75 m-2"></i>
-              Github Users Finder
+              Github Profile Finder
             </Link>
             <button
               className="text-white cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
@@ -45,7 +45,7 @@ const Navbar = () => {
                   className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
                   to="/about"
                 >
-                  <i className="fas fa-info text-lg leading-lg text-white opacity-75"></i>
+                  <i className="fas fa-user-alt text-lg leading-lg text-white opacity-75"></i>
                   <span className="ml-2">About</span>
                 </Link>
               </li>
