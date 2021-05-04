@@ -1,10 +1,12 @@
 import React, { Component, Fragment } from 'react'
 import Spinner from '../Spinner'
 import { Link } from 'react-router-dom'
+import Repos from '../../Repos/Repos'
 
 export class User extends Component {
   componentDidMount() {
     this.props.getUser(this.props.match.params.login)
+    this.props.getUserRepos(this.props.match.params.login)
   }
   render() {
     const {
@@ -23,7 +25,7 @@ export class User extends Component {
       hireable,
     } = this.props.user
 
-    const { loading } = this.props
+    const { loading, repos } = this.props
     if (loading) return <Spinner />
     return (
       <Fragment>
@@ -40,8 +42,8 @@ export class User extends Component {
           <i className="fas fa-times-circle text-red-600" />
         )}
         <div className="flex flex-wrap justify-center">
-          <div className="w-full p-5 md:w-6/12 lg:w-4/12 lg:mb-0 mb-6 px-4 transform transition duration-500 hover:scale-105">
-            <div className="max-w-md p-10 px-8 bg-white shadow-lg rounded-lg my-2">
+          <div className="w-full p-5 md:w-6/12 lg:w-4/12 lg:mb-0  px-4 transform transition duration-500 hover:scale-105">
+            <div className="max-w-md p-3 px-8 bg-white shadow-lg rounded-lg my-2">
               <div className="flex justify-center">
                 <img
                   className="w-20 h-20 cursor-pointer object-cover rounded-full border-2 border-indigo-500  hover:opacity-80 transition-opacity duration-500 ease-in"
@@ -95,27 +97,7 @@ export class User extends Component {
                   #Public Gists {public_gists}
                 </span>
               </div>
-            </div>
-          </div>
-          <div className="w-full p-5 md:w-6/12 lg:w-4/12 lg:mb-0 mb-6 px-4 transform transition duration-500 hover:scale-105">
-            <div className="max-w-md p-10 px-8 bg-white shadow-lg rounded-lg m-2">
-              <p className="text-gray-600">
-                <span className="font-bold text-2xl  flex justify-center text-gray-700">
-                  Repositories{' '}
-                </span>{' '}
-                :{' '}
-              </p>
-              <div className="flex flex-wrap">
-                <button class="py-2 px-3 text-white font-semibold rounded m-2 bg-red-500 hover:bg-green-700 ">
-                  <a href={html_url}>Visit Github Profile</a>
-                </button>
-                <button class="py-2 px-3 text-white font-semibold rounded m-2 bg-yellow-500 hover:bg-green-700 ">
-                  <a href={html_url}>Visit Github Profile fsdfdfsdfs</a>
-                </button>
-                <button class="py-2 px-3 text-white font-semibold rounded m-2 bg-blue-500 hover:bg-green-700 ">
-                  <a href={html_url}>Visit Github Profile</a>
-                </button>
-              </div>
+              <Repos repos={repos} />
             </div>
           </div>
         </div>
