@@ -42,7 +42,7 @@ export class User extends Component {
           <i className="fas fa-times-circle text-red-600" />
         )}
         <div className="flex flex-wrap justify-center">
-          <div className="w-full p-5 md:w-6/12 lg:w-4/12 lg:mb-0  px-4 transform transition duration-500 hover:scale-105">
+          <div className="w-full p-5 md:w-6/12 lg:w-4/12 lg:mb-0 px-4 transform transition duration-500 hover:scale-105">
             <div className="max-w-md p-3 px-8 bg-white shadow-lg rounded-lg my-2">
               <div className="flex justify-center">
                 <img
