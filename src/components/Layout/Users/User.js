@@ -42,7 +42,7 @@ export class User extends Component {
           <i className="fas fa-times-circle text-red-600" />
         )}
         <div className="flex flex-wrap justify-center">
-          <div className="w-full p-5 md:w-6/12 lg:w-4/12 lg:mb-0 px-4 transform transition duration-500 hover:scale-105">
+          <div className="w-full p-5 md:w-6/12 lg:w-4/12 lg:mb-0px-4 transform transition duration-500 hover:scale-105">
             <div className="max-w-md p-3 px-8 bg-white shadow-lg rounded-lg my-2">
               <div className="flex justify-center">
                 <img
@@ -65,7 +65,7 @@ export class User extends Component {
                 </p>
               </div>
 
-              <button className=" py-2 px-3 m-2 text-white font-semibold rounded  bg-green-400 hover:bg-green-600 ">
+              <button className="py-2 px-3 m-2 text-white font-semibold rounded  bg-green-400 hover:bg-green-600 ">
                 <a href={html_url}>Visit Github Profile</a>
               </button>
               <p className="mt-2 text-gray-600">
