@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react'
 import GithubContext from '../../../Context/Github/githubContext'
 
-const Search = ({ showClear, clearUsers, setAlert }) => {
+const Search = ({ setAlert }) => {
   const githubContext = useContext(GithubContext)
   const [text, setText] = useState('')
 
@@ -36,11 +36,11 @@ const Search = ({ showClear, clearUsers, setAlert }) => {
           </button>
         </div>
       </form>
-      {showClear && (
+      {githubContext.users.length > 0 && (
         <div className="flex  justify-center">
           <button
             className="bg-blue-500 hover:bg-blue-700 uppercase font-semibold text-white tracking-wider py-2 px-4 rounded opacity-70"
-            onClick={clearUsers}
+            onClick={githubContext.clearUsers}
           >
             Clear
           </button>
