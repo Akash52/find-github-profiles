@@ -12,26 +12,11 @@ import About from './components/Pages/About'
 
 import GithubState from './Context/Github/GithubState'
 
-let REACT_CLIENT_ID = 'ccd3a0c757c978538dd4'
-let REACT_CLIENT_KEY = '05579e08c00b61cae13f066d6b5dc818e8b71842'
-
 const App = (props) => {
-  const [user, setUser] = useState({})
-  const [repos, setRepos] = useState([])
   const [loading, setLoading] = useState(false)
   const [alert, setAlert] = useState(null)
 
   // Get user Repos
-
-  const getUserRepos = async (username) => {
-    setLoading(true)
-    const res = await axios.get(
-      `https://api.github.com/users/${username}/repos?per_page=5&sort=created:asc&client_id=${REACT_CLIENT_ID}&client_secret=${REACT_CLIENT_KEY}`
-    )
-
-    setRepos(res.data)
-    setLoading(false)
-  }
 
   //Clear Users
 
@@ -63,18 +48,7 @@ const App = (props) => {
                   )}
                 />
                 <Route exact path="/about" component={About} />
-                <Route
-                  exact
-                  path="/user/:login"
-                  render={(props) => (
-                    <User
-                      {...props}
-                      getUserRepos={getUserRepos}
-                      repos={repos}
-                      loading={loading}
-                    />
-                  )}
-                />
+                <Route exact path="/user/:login" component={User} />
               </Switch>
             </div>
           </section>

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import Repos from '../../Repos/Repos'
 import GithubContext from '../../../Context/Github/githubContext'
 
-const User = ({ repos, getUserRepos, match }) => {
+const User = ({ match }) => {
   const githubContext = useContext(GithubContext)
   useEffect(() => {
     getUser(match.params.login)
@@ -12,7 +12,7 @@ const User = ({ repos, getUserRepos, match }) => {
     // eslint-disable-next-line
   }, [])
 
-  const { getUser, loading, user } = githubContext
+  const { getUser, loading, user, repos, getUserRepos } = githubContext
 
   const {
     name,
@@ -45,12 +45,12 @@ const User = ({ repos, getUserRepos, match }) => {
       ) : (
         <i className="fas fa-times-circle text-red-600" />
       )}
-      <div className="flex flex-wrap justify-center">
-        <div className="w-full p-5 md:w-6/12 lg:w-4/12 lg:mb-0px-4 transform transition duration-500 hover:scale-105">
-          <div className="max-w-md p-3 px-8 bg-white shadow-lg rounded-lg my-2">
-            <div className="flex justify-center">
+      <div className="flex   justify-center">
+        <div className="w-full p-3 md:w-6/12  lg:w-6/12 lg:mb-0px-4 ">
+          <div className="max-w-md p-3 px-8 bg-white hover:bg-red-50 hover:text-white shadow-lg rounded-lg my-2">
+            <div className="flex justify-center ">
               <img
-                className="w-20 h-20 cursor-pointer object-cover rounded-full border-2 border-indigo-500  hover:opacity-80 transition-opacity duration-500 ease-in"
+                className="cursor-pointer w-24 h-24 object-cover rounded-full border-2 border-indigo-500  hover:opacity-80 transition-opacity duration-500 ease-in"
                 src={avatar_url}
                 alt=""
               />
@@ -61,11 +61,14 @@ const User = ({ repos, getUserRepos, match }) => {
                   {name}
                 </span>
               </div>
-              <div className="font-bold flex justify-center text-ml m-1">
+              <div className="font-bold flex justify-center text-ml m-1 text-gray-700">
                 Location : {location}
               </div>
-              <p className="mt-2 text-gray-600">
-                <span className="font-bold text-gray-700">Bio </span> : {bio}
+              <p className="mt-2  text-gray-600">
+                <span className="font-bold md:break-words text-gray-700">
+                  Bio{' '}
+                </span>{' '}
+                : {bio}
               </p>
             </div>
 
@@ -85,23 +88,29 @@ const User = ({ repos, getUserRepos, match }) => {
               <a href={blog}>{blog}</a>
             </p>
 
-            <div className="flex justify-between m-2 px-4 py-2">
-              <span className="inline-block bg-blue-100 rounded-full px-3 py-1 text-sm font-semibold text-grey-darker mr-2">
-                #Followers {followers}
-              </span>
-              <span className="inline-block bg-green-100 rounded-full px-3 py-1 text-sm font-semibold text-grey-darker mr-2">
-                #Following {following}
-              </span>
+            <div className="max-w-md p-3 px-8 bg-gray-50 rounded-lg animate-pulse shadow-sm my-2">
+              <div className="flex justify-between  m-2 p-2">
+                <span className="inline-block  text-white bg-blue-400 rounded-full px-3 py-1 text-sm font-semibold text-grey-darker mr-2">
+                  Followers {followers}
+                </span>
+                <span className="inline-block text-white bg-pink-400 rounded-full px-3 py-1 text-sm font-semibold text-grey-darker mr-2">
+                  Following {following}
+                </span>
+              </div>
+              <div className="flex justify-between  m-2  p-2">
+                <span className="inline-block text-white bg-indigo-400 rounded-full px-3 py-1 text-sm font-semibold text-grey-darker mr-2">
+                  Public Repos {public_repos}
+                </span>
+                <span className="inline-block text-white bg-purple-400  rounded-full px-3 py-1 text-sm font-semibold text-grey-darker mr-2">
+                  Public Gists {public_gists}
+                </span>
+              </div>
             </div>
-            <div className="flex justify-between  m-2 px-4 py-2">
-              <span className="inline-block bg-red-100 rounded-full px-3  text-sm font-semibold text-grey-darker mr-2">
-                #Public Repos {public_repos}
-              </span>
-              <span className="inline-block bg-yellow-100 rounded-full px-3  text-sm font-semibold text-grey-darker  mr-2">
-                #Public Gists {public_gists}
-              </span>
+            <div className="flex  animate-pulse justify-evenly  m-2  p-2">
+              <div className="max-w-md p-3 px-8 bg-gray-50 shadow-sm rounded-lg my-2">
+                <Repos repos={repos} />
+              </div>
             </div>
-            <Repos repos={repos} />
           </div>
         </div>
       </div>
