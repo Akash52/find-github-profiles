@@ -45,9 +45,9 @@ const User = ({ match }) => {
       ) : (
         <i className="fas fa-times-circle text-red-600" />
       )}
-      <div className="flex   justify-center">
-        <div className="w-full p-3 md:w-6/12  lg:w-6/12 lg:mb-0px-4 ">
-          <div className="max-w-md p-3 px-8 bg-white hover:bg-red-50 hover:text-white shadow-lg rounded-lg my-2">
+      <div className="flex justify-center">
+        <div className="w-full p-3 md:w-6/12  lg:w-6/12 lg:mb-0 px-4 ">
+          <div className="max-w-md p-3 px-8 bg-white  shadow-lg rounded-lg my-2">
             <div className="flex justify-center ">
               <img
                 className="cursor-pointer w-24 h-24 object-cover rounded-full border-2 border-indigo-500  hover:opacity-80 transition-opacity duration-500 ease-in"
