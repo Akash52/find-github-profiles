@@ -37,11 +37,10 @@ you will find easly any github user profile
   <p align="left">
 <img src="https://i.ibb.co/9bkLJt6/Screenshot-20210515-102424-Chrome.jpg" width="300 height="400"/                                                                                                                      
 </p>
-                                                                                                                                                                                
-## Feel Free to use your upcoming projects ! 
 
-### 🎉 Acknowledgements <a name = "acknowledgement"></a>
-- [React Simple Chatbot](https://github.com/LucasBassetti/react-simple-chatbot) 
+
+### 🎉 Acknowledgements & Inspiration <a name = "acknowledgement"></a>
+- [Traversy Media](https://www.youtube.com/user/TechGuyWeb) 
 
 
 
