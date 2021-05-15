@@ -1,4 +1,3 @@
-import axios from 'axios'
 import React, { useState, Fragment } from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Alert from './components/Layout/Alert'
@@ -13,7 +12,6 @@ import About from './components/Pages/About'
 import GithubState from './Context/Github/GithubState'
 
 const App = (props) => {
-  const [loading, setLoading] = useState(false)
   const [alert, setAlert] = useState(null)
 
   // Get user Repos

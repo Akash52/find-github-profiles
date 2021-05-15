@@ -8,7 +8,6 @@ const Seaction = () => {
           <h2 className="uppercase  animate-pulse hover:opacity-80 text-4xl font-semibold ">
             Github Finder
           </h2>
-
           <p className="cursor-pointer animate-bounce hover:opacity-80 uppercase text-lg leading-relaxed m-4 text-gray-600">
             You will find easly any Github user profile
           </p>

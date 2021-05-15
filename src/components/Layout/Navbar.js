@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false)
+
   return (
     <>
       <nav className="bg-gray-800 relative flex flex-wrap items-center justify-between px-2 py-3 bg-blueGray-500 mb-3">
@@ -20,7 +21,11 @@ const Navbar = () => {
               type="button"
               onClick={() => setNavbarOpen(!navbarOpen)}
             >
-              <i className="fas fa-bars"></i>
+              {!navbarOpen ? (
+                <i className="fas fa-bars " />
+              ) : (
+                <i className="fas fa-times" />
+              )}
             </button>
           </div>
           <div
