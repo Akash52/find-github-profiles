@@ -118,8 +118,8 @@ const User = ({ match }) => {
               <a href={blog}>{blog}</a>
             </p>
           </div>
-          <div className="max-w-md p-3  bg-gray-50 rounded-lg  shadow-sm my-2">
-            <div className="flex justify-evenly">
+          <div className="max-w-md p-2  bg-gray-50 rounded-lg  shadow-sm my-2">
+            <div className="flex justify-between px-4">
               <span className="inline-block text-white bg-gray-800 rounded-full px-3 py-1 text-sm font-semibold">
                 Followers {followers}
               </span>
@@ -127,7 +127,7 @@ const User = ({ match }) => {
                 Following {following}
               </span>
             </div>
-            <div className="flex justify-evenly mt-2">
+            <div className="flex justify-between px-4 mt-2">
               <span className="inline-block text-white bg-gray-800 rounded-full px-3 py-1 text-sm font-semibold ">
                 Repos {public_repos}
               </span>
