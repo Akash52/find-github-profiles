@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const Useritem = ({ user: { login, avatar_url, html_url } }) => {
   return (
     <div className="w-full p-5 md:w-6/12 xl:4/12  lg:w-4/12 lg:mb-0 mb-6 px-4 transform transition duration-500 hover:scale-110">
-      <div className="max-w-md py-4 px-8 bg-white shadow-lg rounded-lg my-2">
+      <div className="max-w-md py-4 px-8 bg-white dark:bg-yellow-900 shadow-lg rounded-lg my-2">
         <div className="px-6">
           <img
             alt="..."
