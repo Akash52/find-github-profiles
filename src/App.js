@@ -28,7 +28,7 @@ const App = (props) => {
   return (
     <GithubState>
       <Router>
-        <main className="bg-pink-50">
+        <main>
           <Navbar />
           <section className="pt-5 pb-5">
             <div className="container mx-auto px-4">
