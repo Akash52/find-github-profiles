@@ -1,7 +1,7 @@
 # Github User Profile Finder using React + TailwindCSS
 ---
 
-[Live Demo](https://elastic-kalam-442298.netlify.app/)
+[Live Demo](modest-murdock-af6c60.netlify.app/)
 
 ##  About <a name = "about"></a>
 
