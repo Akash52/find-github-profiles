@@ -35,21 +35,21 @@ const User = ({ match }) => {
     <Fragment>
       <Link
         to="/"
-        className="ml-10 py-2 px-3 text-white font-semibold rounded m-2 bg-blue-500 hover:bg-blue-700"
+        className="px-3 py-2 m-2 ml-10 font-semibold text-white bg-blue-500 rounded hover:bg-blue-700"
       >
         Back
       </Link>
       <span className="font-bold text-gray-700">Hireable </span>:{' '}
       {hireable ? (
-        <i className="fas fa-check text-green-500" />
+        <i className="text-green-500 fas fa-check" />
       ) : (
-        <i className="fas fa-times-circle text-red-600" />
+        <i className="text-red-600 fas fa-times-circle" />
       )}
-      <div className="flex  justify-center mx-auto  w-full h-full py-4">
-        <div className="max-w-md py-2 px-4  bg-white lg:max-w-lg  w-full   shadow-lg rounded-lg my-2">
-          <div className="flex justify-center ">
+      <div className="flex justify-center w-full h-full py-4 mx-auto">
+        <div className="w-full max-w-md px-4 py-2 my-2 bg-white rounded-lg shadow-lg lg:max-w-lg">
+          <div className="flex justify-center">
             <img
-              className="cursor-pointer w-24 h-24 object-cover rounded-full border-2 border-indigo-500  hover:opacity-80 transition-opacity duration-500 ease-in"
+              className="object-cover w-24 h-24 transition-opacity duration-500 ease-in border-2 border-indigo-500 rounded-full cursor-pointer hover:opacity-80"
               src={avatar_url}
               alt=""
             />
@@ -60,19 +60,19 @@ const User = ({ match }) => {
                 {name}
               </span>
             </div>
-            <div className="font-bold flex justify-center text-ml m-1 text-gray-600">
-              Location : <span className="  text-gray-600"> {location}</span>
+            <div className="flex justify-center m-1 font-bold text-gray-600 text-ml">
+              Location : <span className="text-gray-600 "> {location}</span>
             </div>
 
-            <p className="mt-2  text-gray-600">
-              <span className="font-bold md:break-words sm:break-words text-gray-700">
+            <p className="mt-2 font-semibold text-gray-600">
+              <span className="font-bold text-gray-700 md:break-words sm:break-words">
                 Bio{' '}
               </span>{' '}
               : {bio}
             </p>
           </div>
-          <div className="max-w-md p-3 px-5 bg-gray-50 shadow-sm rounded-lg my-2">
-            <button className="py-2 px-3 mt-1 bg-gradient-to-br from-indigo-400 to-indigo-500 hover:from-indigo-500 hover:to-indigo-400 rounded-sm flex items-center">
+          <div className="max-w-md p-3 px-5 my-2 rounded-lg shadow-sm bg-gray-50">
+            <button className="flex items-center px-3 py-2 mt-1 rounded-sm bg-gradient-to-br from-indigo-400 to-indigo-500 hover:from-indigo-500 hover:to-indigo-400">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width={12}
@@ -101,7 +101,7 @@ const User = ({ match }) => {
                   fill="white"
                 />
               </svg>
-              <p className="text-xs leading-3 text-white dark:text-gray-100 ml-1">
+              <p className="ml-1 text-xs leading-3 text-white dark:text-gray-100">
                 <a href={html_url}>Visit Github Profile</a>
               </p>
             </button>
@@ -114,35 +114,32 @@ const User = ({ match }) => {
               {company}
             </p>
             <p className="text-gray-600">
-              <span className="font-bold _blank text-gray-700">Website </span> :{' '}
+              <span className="font-bold text-gray-700 _blank">Website </span> :{' '}
               <a href={blog}>{blog}</a>
             </p>
           </div>
-          <div className="max-w-md p-2  bg-gray-50 rounded-lg  shadow-sm my-2">
-            <div className="flex justify-between px-4">
-              <span className="inline-block text-white bg-gray-800 rounded-full px-3 py-1 text-sm font-semibold">
-                Followers {followers}
+          <div className="max-w-md p-2 my-2 rounded-lg shadow-sm bg-gray-50">
+            <div className="flex flex-wrap px-4 m-4 justify-evenly ">
+              <span className="inline-block px-3 py-1 text-sm font-semibold text-white bg-gray-800 rounded-full">
+                Followers : {followers}
               </span>
-              <span className="inline-block text-white bg-gray-800 rounded-full px-3 py-1 text-sm font-semibold  ">
-                Following {following}
+              <span className="inline-block px-3 py-1 text-sm font-semibold text-white bg-gray-800 rounded-full ">
+                Following : {following}
               </span>
-            </div>
-            <div className="flex justify-between px-4 mt-2">
-              <span className="inline-block text-white bg-gray-800 rounded-full px-3 py-1 text-sm font-semibold ">
-                Repos {public_repos}
+
+              <span className="inline-block px-3 py-1 text-sm font-semibold text-white bg-gray-800 rounded-full ">
+                Repos : {public_repos}
               </span>
-              <span className="inline-block text-white bg-gray-800 rounded-full px-3 py-1 text-sm font-semibold">
-                Gists {public_gists}
+              <span className="inline-block px-3 py-1 mt-2 text-sm font-semibold text-white bg-gray-800 rounded-full">
+                Gists : {public_gists}
               </span>
             </div>
           </div>
-          <span className="font-bold md:break-words sm:break-words text-gray-700">
+          <span className="font-bold text-gray-700 md:break-words sm:break-words">
             Latest Repository :
           </span>{' '}
-          <div className="flex justify-evenly">
-            <div className="max-w-md p-3 px-5 bg-gray-50 shadow-sm rounded-lg my-2">
-              <Repos repos={repos} />
-            </div>
+          <div className="flex flex-wrap max-w-md p-3 px-5 mr-3 rounded-lg shadow-sm justify-evenly bg-gray-50">
+            <Repos repos={repos} />
           </div>
         </div>
       </div>

@@ -10,15 +10,11 @@ import User from './components/Layout/Users/User'
 import About from './components/Pages/About'
 
 import GithubState from './Context/Github/GithubState'
+import Login from './components/Pages/Login'
 
-const App = (props) => {
+const App = () => {
   const [alert, setAlert] = useState(null)
 
-  // Get user Repos
-
-  //Clear Users
-
-  //Set alert
   const showAlert = (msg) => {
     setAlert({ msg })
 
@@ -28,29 +24,28 @@ const App = (props) => {
   return (
     <GithubState>
       <Router>
-        <main>
-          <Navbar />
-          <section className="pt-5 pb-5">
-            <div className="container mx-auto px-4">
-              <Route exact path="/" component={Seaction} />
-              <Alert alert={alert} />
-              <Switch>
-                <Route
-                  exact
-                  path="/"
-                  render={(props) => (
-                    <Fragment>
-                      <Search setAlert={showAlert} />
-                      <Users />
-                    </Fragment>
-                  )}
-                />
-                <Route exact path="/about" component={About} />
-                <Route exact path="/user/:login" component={User} />
-              </Switch>
-            </div>
-          </section>
-        </main>
+        <Navbar />
+        <Route exact path="/login" component={Login} />
+        {/* <section className="pt-5 pb-5">
+          <div className="container px-4 mx-auto">
+            <Route exact path="/" component={Seaction} />
+            <Alert alert={alert} />
+            <Switch>
+              <Route
+                exact
+                path="/"
+                render={() => (
+                  <Fragment>
+                    <Search setAlert={showAlert} />
+                    <Users />
+                  </Fragment>
+                )}
+              />
+              <Route exact path="/about" component={About} />
+              <Route exact path="/user/:login" component={User} />
+            </Switch>
+          </div>
+        </section> */}
       </Router>
     </GithubState>
   )

@@ -6,18 +6,18 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="bg-gray-800 relative flex flex-wrap items-center justify-between px-2 py-2 bg-blueGray-500 mb-3">
-        <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
-          <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
+      <nav className="relative flex flex-wrap items-center justify-between px-2 py-2 mb-3 bg-gray-800 bg-blueGray-500">
+        <div className="container flex flex-wrap items-center justify-between px-4 mx-auto">
+          <div className="relative flex justify-between w-full lg:w-auto lg:static lg:block lg:justify-start">
             <Link
-              className="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white"
+              className="inline-block py-2 mr-4 text-sm font-bold leading-relaxed text-white uppercase whitespace-nowrap"
               to="/"
             >
-              <i className="fab fa-github text-lg leading-lg animate-pulse text-white opacity-75 m-2"></i>
+              <i className="m-2 text-lg text-white opacity-75 fab fa-github leading-lg animate-pulse"></i>
               Github Finder
             </Link>
             <button
-              className="text-white cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+              className="block px-3 py-1 text-xl leading-none text-white bg-transparent border border-transparent border-solid rounded outline-none cursor-pointer lg:hidden focus:outline-none"
               type="button"
               onClick={() => setNavbarOpen(!navbarOpen)}
             >
@@ -35,22 +35,31 @@ const Navbar = () => {
             }
             id="example-navbar-danger"
           >
-            <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
+            <ul className="flex flex-col list-none lg:flex-row lg:ml-auto">
               <li className="nav-item">
                 <Link
-                  className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
+                  className="flex items-center px-3 py-2 text-xs font-bold leading-snug text-white uppercase hover:opacity-75"
                   to="/"
                 >
-                  <i className="fas fa-home text-lg leading-lg text-white opacity-75"></i>
+                  <i className="text-lg text-white opacity-75 fas fa-home leading-lg"></i>
                   <span className="ml-2">Home</span>
                 </Link>
               </li>
               <li className="nav-item">
                 <Link
-                  className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
+                  className="flex items-center px-3 py-2 text-xs font-bold leading-snug text-white uppercase hover:opacity-75"
+                  to="/"
+                >
+                  <i className="text-lg text-white opacity-75 fas fa-home leading-lg"></i>
+                  <span className="ml-2">Home</span>
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link
+                  className="flex items-center px-3 py-2 text-xs font-bold leading-snug text-white uppercase hover:opacity-75"
                   to="/about"
                 >
-                  <i className="fas fa-user-alt text-lg leading-lg text-white opacity-75"></i>
+                  <i className="text-lg text-white opacity-75 fas fa-user-alt leading-lg"></i>
                   <span className="ml-2">About</span>
                 </Link>
               </li>
