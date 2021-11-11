@@ -48,10 +48,10 @@ const Navbar = () => {
               <li className="nav-item">
                 <Link
                   className="flex items-center px-3 py-2 text-xs font-bold leading-snug text-white uppercase hover:opacity-75"
-                  to="/"
+                  to="/login"
                 >
-                  <i className="text-lg text-white opacity-75 fas fa-home leading-lg"></i>
-                  <span className="ml-2">Home</span>
+                  <i class="text-lg text-white fas fa-sign-in-alt leading-lg"></i>
+                  <span className="ml-2">Login</span>
                 </Link>
               </li>
               <li className="nav-item">

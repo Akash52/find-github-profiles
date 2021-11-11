@@ -1,5 +1,7 @@
 import React, { useState, useContext } from 'react'
 import GithubContext from '../../../Context/Github/githubContext'
+import Seaction from './../Seaction'
+import Users from './Users'
 
 const Search = ({ setAlert }) => {
   const githubContext = useContext(GithubContext)
@@ -21,6 +23,7 @@ const Search = ({ setAlert }) => {
 
   return (
     <div>
+      <Seaction />
       <form autoComplete="off" onSubmit={onSubmit}>
         <div className="flex m-3 ">
           <input
@@ -46,6 +49,7 @@ const Search = ({ setAlert }) => {
           </button>
         </div>
       )}
+      <Users />
     </div>
   )
 }

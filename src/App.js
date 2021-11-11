@@ -1,11 +1,9 @@
 import React, { useState, Fragment } from 'react'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { BrowserRouter, Route, Routes, useParams } from 'react-router-dom'
 import Alert from './components/Layout/Alert'
 import Navbar from './components/Layout/Navbar'
-import Seaction from './components/Layout/Seaction'
 
 import Search from './components/Layout/Users/Search'
-import Users from './components/Layout/Users/Users'
 import User from './components/Layout/Users/User'
 import About from './components/Pages/About'
 
@@ -23,30 +21,30 @@ const App = () => {
 
   return (
     <GithubState>
-      <Router>
+      <BrowserRouter>
         <Navbar />
-        <Route exact path="/login" component={Login} />
-        {/* <section className="pt-5 pb-5">
+        <Routes>
+          {' '}
           <div className="container px-4 mx-auto">
-            <Route exact path="/" component={Seaction} />
+            {/* <Route exact path="/" element={<Seaction />} /> */}
             <Alert alert={alert} />
-            <Switch>
-              <Route
-                exact
-                path="/"
-                render={() => (
-                  <Fragment>
-                    <Search setAlert={showAlert} />
-                    <Users />
-                  </Fragment>
-                )}
-              />
-              <Route exact path="/about" component={About} />
-              <Route exact path="/user/:login" component={User} />
-            </Switch>
+            <Route exact path="/" element={<Search setAlert={showAlert} />} />
+            {/* <Route
+              exact
+              path="/"
+              render={() => (
+                <Fragment>
+                  element={<Search setAlert={showAlert} />}
+                  element={<Users />}
+                </Fragment>
+              )}
+            /> */}
+            <Route exact path="/login" element={<Login />} />
+            <Route exact path="/about" element={<About />} />
+            <Route exact path="/user/:login" element={<User />} />
           </div>
-        </section> */}
-      </Router>
+        </Routes>
+      </BrowserRouter>
     </GithubState>
   )
 }

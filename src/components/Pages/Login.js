@@ -1,11 +1,8 @@
 import '../../App'
 const Login = () => {
   return (
-    <div className="login">
-      <h1 className="absolute mt-4 text-2xl font-bold text-gray-600 top-40 loginTitle">
-        Choose a Login Method
-      </h1>
-      <div className="flex items-center shadow-2xl rounded-2xl hover:shadow-md wrapper">
+    <div className=" login">
+      <div className="flex items-center max-w-full shadow-2xl rounded-2xl hover:shadow-md wrapper">
         <div className="left">
           <div className="font-semibold bg-red-600 hover:bg-red-700 loginButton">
             <i className="mr-1 text-xl text-white fab fa-google leading-lg"></i>{' '}
