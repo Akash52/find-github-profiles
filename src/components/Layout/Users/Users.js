@@ -1,22 +1,36 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import Spinner from '../Spinner'
 import UserItem from './Useritem'
 import GithubContext from '../../../Context/Github/githubContext'
+import Search from './Search'
+import Alert from './../Alert'
 
 const Users = () => {
+  const [alert, setAlert] = useState(null)
+
+  const showAlert = (msg) => {
+    setAlert({ msg })
+
+    setTimeout(() => setAlert(null), 3000)
+  }
   const githubContext = useContext(GithubContext)
   const { loading, users } = githubContext
-  if (loading) {
-    return <Spinner />
-  } else {
-    return (
-      <div className="p-3 flex flex-wrap mt-5">
-        {users.map((user) => (
-          <UserItem key={user.id} user={user} />
-        ))}
-      </div>
-    )
-  }
+
+  return (
+    <>
+      <Search setAlert={showAlert} />
+      <Alert alert={alert} />
+      {loading ? (
+        <Spinner />
+      ) : (
+        <div className="flex flex-wrap p-3 mt-5">
+          {users.map((user) => (
+            <UserItem key={user.id} user={user} />
+          ))}
+        </div>
+      )}
+    </>
+  )
 }
 
 export default Users

@@ -14,7 +14,7 @@ const Login = () => {
             Facebook
           </div>
 
-          <div className="font-semibold bg-gray-700 loginButton">
+          <div className="font-semibold bg-gray-600 hover:bg-gray-700 loginButton">
             {' '}
             <i className="mr-1 text-xl text-white fab fa-github leading-lg"></i>{' '}
             Github
