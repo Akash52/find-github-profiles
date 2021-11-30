@@ -81,7 +81,7 @@ const User = () => {
               : {bio}
             </p>
           </div>
-          <div className="max-w-md p-3 px-5 my-2 rounded-lg shadow-sm bg-gray-50">
+          <div className="max-w-md p-3 px-5 my-2 rounded-lg shadow-sm bg-gradient-to-l from-yellow-200 via-green-200 to-green-300">
             <button className="flex items-center px-3 py-2 mt-1 rounded-sm bg-gradient-to-br from-indigo-400 to-indigo-500 hover:from-indigo-500 hover:to-indigo-400">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -128,7 +128,7 @@ const User = () => {
               <a href={blog}>{blog}</a>
             </p>
           </div>
-          <div className="max-w-md p-2 m-2 rounded-lg shadow-sm bg-gray-50">
+          <div className="max-w-md p-2 m-2 rounded-lg shadow-sm bg-gradient-to-r from-yellow-200 via-green-200 to-green-300">
             <div className="flex flex-wrap justify-between px-4 m-3 justify-items-center ">
               <span className="inline-block px-3 py-1 text-sm font-semibold text-white bg-gray-800 rounded-full">
                 Followers : {followers}
@@ -148,7 +148,7 @@ const User = () => {
           <span className="font-bold text-gray-700 md:break-words sm:break-words">
             Latest Repository :
           </span>{' '}
-          <div className="flex flex-wrap max-w-md p-3 px-5 mr-3 rounded-lg shadow-sm justify-evenly bg-gray-50">
+          <div className="flex flex-wrap max-w-md p-3 px-5 mr-3 rounded-lg shadow-sm justify-evenly bg-gradient-to-l from-yellow-200 via-green-200 to-green-300">
             <Repos repos={repos} />
           </div>
         </div>
