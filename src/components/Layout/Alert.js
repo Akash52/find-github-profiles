@@ -4,12 +4,9 @@ const Alert = ({ alert }) => {
   return (
     alert !== null && (
       <div
-        class="p-2 bg-indigo-500 items-center text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex"
+        class="p-2 justify-center bg-indigo-500 items-center text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex"
         role="alert"
       >
-        <span class="flex rounded-full bg-indigo-700 uppercase px-2 py-1 text-xs font-bold mr-3">
-          🐯
-        </span>
         <span class="font-semibold mr-2 text-left flex-auto">{alert.msg}</span>
         <svg
           class="fill-current opacity-75 h-4 w-4"

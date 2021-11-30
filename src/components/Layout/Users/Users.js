@@ -19,7 +19,10 @@ const Users = () => {
   return (
     <>
       <Search setAlert={showAlert} />
-      <Alert alert={alert} />
+      <div className="flex justify-center mt-3">
+        <Alert alert={alert} />
+      </div>
+
       {loading ? (
         <Spinner />
       ) : (

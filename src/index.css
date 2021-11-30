@@ -3,12 +3,8 @@
 @tailwind utilities;
 
 body {
-  background: rgb(219, 199, 208);
-  background: linear-gradient(
-    90deg,
-    rgb(174, 238, 219) 0%,
-    rgb(233, 227, 148) 100%
-  );
+  background-color: #111827;
+  overflow-y: auto;
 }
 
 .login {

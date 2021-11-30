@@ -7,13 +7,20 @@ import GithubContext from '../../../Context/Github/githubContext'
 const User = () => {
   const githubContext = useContext(GithubContext)
 
-  const { match } = useParams()
+  const params = useParams()
 
   useEffect(() => {
-    getUser(match.params.login)
-    getUserRepos(match.params.login)
+    getUser(params.login)
+    getUserRepos(params.login)
     // eslint-disable-next-line
   }, [])
+
+  // useEffect(() => {
+  //   // getUser(match.params.login)
+  //   // getUserRepos(match.params.login)
+  //   console.warn('HELLO____', match.params?.login)
+  //   // eslint-disable-next-line
+  // }, [])
 
   const { getUser, loading, user, repos, getUserRepos } = githubContext
 
@@ -42,14 +49,14 @@ const User = () => {
       >
         Back
       </Link>
-      <span className="font-bold text-gray-700">Hireable </span>:{' '}
+      <span className="font-bold text-gray-200">Hireable </span>:{' '}
       {hireable ? (
         <i className="text-green-500 fas fa-check" />
       ) : (
         <i className="text-red-600 fas fa-times-circle" />
       )}
       <div className="flex justify-center w-full h-full py-4 mx-auto">
-        <div className="w-full max-w-md px-4 py-2 my-2 bg-white rounded-lg shadow-lg lg:max-w-lg">
+        <div className="w-full max-w-md px-4 py-2 my-2 shadow-2xl rounded-2xl bg-gradient-to-r from-yellow-200 via-green-200 to-green-300 lg:max-w-lg">
           <div className="flex justify-center">
             <img
               className="object-cover w-24 h-24 transition-opacity duration-500 ease-in border-2 border-indigo-500 rounded-full cursor-pointer hover:opacity-80"
@@ -121,8 +128,8 @@ const User = () => {
               <a href={blog}>{blog}</a>
             </p>
           </div>
-          <div className="max-w-md p-2 my-2 rounded-lg shadow-sm bg-gray-50">
-            <div className="flex flex-wrap px-4 m-4 justify-evenly ">
+          <div className="max-w-md p-2 m-2 rounded-lg shadow-sm bg-gray-50">
+            <div className="flex flex-wrap justify-between px-4 m-3 justify-items-center ">
               <span className="inline-block px-3 py-1 text-sm font-semibold text-white bg-gray-800 rounded-full">
                 Followers : {followers}
               </span>

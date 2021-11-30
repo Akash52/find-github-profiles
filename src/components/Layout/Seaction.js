@@ -3,16 +3,18 @@ import React from 'react'
 const Seaction = () => {
   return (
     <div>
-      <div className="flex flex-wrap justify-center mb-5 text-center">
-        <div className="w-full px-4 lg:w-6/12">
-          <h2 className="text-4xl font-semibold text-gray-900 uppercase animate-pulse hover:opacity-80 ">
-            Github Finder
-          </h2>
-          <p className="m-4 text-lg leading-relaxed text-gray-600 uppercase cursor-pointer animate-bounce hover:opacity-80">
-            You will find easly any Github user profile
-          </p>
+      <section className="relative text-center ">
+        <div className="container py-12 sm:py-24 lg:py-24">
+          <div className="flex flex-col text-transparent bg-gradient-to-r from-blue-500 via-green-500 to-yellow-500 bg-clip-text ">
+            <h1 className="mt-1 text-4xl font-extrabold uppercase tracking-tighest sm:text-5xl lg:text-7xl">
+              GITHUB FINDER
+            </h1>{' '}
+            <h2 className="order-first font-medium tracking-wide animate-pulse">
+              GITHUB FINDER
+            </h2>
+          </div>{' '}
         </div>
-      </div>
+      </section>
     </div>
   )
 }
